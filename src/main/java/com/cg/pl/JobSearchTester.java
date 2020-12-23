@@ -29,60 +29,31 @@ public class JobSearchTester {
 	private static JobSeekerService jservice = new JobSeekerServiceImpl();
 	private static LoginService lservice = new LoginServiceImpl();
 	public static void main(String[] args) throws Exception {
-		while(true) {
-			System.out.println("Enter 1. Register as Employer 2.Login as Employer 3. Register as JobSeeker 4. Login as JobSeeker 5.Post A Job 6. Delete a job"
-					+ "7. View All Jobs Posted By Employer");
-			int option= Integer.parseInt(scanner.nextLine());
-			try {
-				switch(option) {
-				case 1:
-					EmployerBuilder builder=new EmployerBuilder();
-					registerEmployer(builder);
-					System.out.println("New Employer Added succesfully.. ");
-					break;
-			   case 2:
-				    LoginBuilder lbuilder=new LoginBuilder();
-				    loginAsEmployer(lbuilder);
-				    System.out.println("Employer logged in succesfully.. ");
-				    break;
-				case 3:
-					JobSeekerBuilder jbuilder=new JobSeekerBuilder();
-					registerJobSeeker(jbuilder);
-					System.out.println("New JobSeeker Added succesfully.. ");
-					break;
-				case 4:
-					LoginBuilder jobbuilder=new LoginBuilder();
-					loginAsJobSeeker(jobbuilder);
-					System.out.println("JobSeeker logged in succesfully.. ");
-				case 5:
-					JobBuilder jjbuilder=new JobBuilder();
-					postAjob(jjbuilder);
-					System.out.println("New Job Posted succesfully.. ");
-					break;
-				case 6:
-					JobBuilder jdbuilder=new JobBuilder();
-					System.out.println("Enter job id:");
-					int job_id=Integer.parseInt(scanner.nextLine());
-					int id=deleteAjob(job_id);
-					System.out.println("Job Deleted succesfully.. ");
-					break;
-				case 7:
-					JobBuilder viewbuilder=new JobBuilder();
-					viewAllJobsByEmployer();
-					break;
-				default: System.out.println("Invalid option");
-				 break;	
-				}
-			}catch(EmployerException e) {
-				e.printStackTrace();
-			}
-			System.out.println("Enter y to continue..");
-			String ch=scanner.nextLine();
-			if(!ch.equalsIgnoreCase("y")) {
-				break;
-			}}}
-			
-			
+	/*
+	 * while(true) { System.out.
+	 * println("Enter 1. Register as Employer 2.Login as Employer 3. Register as JobSeeker 4. Login as JobSeeker 5.Post A Job 6. Delete a job"
+	 * + "7. View All Jobs Posted By Employer"); int option=
+	 * Integer.parseInt(scanner.nextLine()); try { switch(option) { case 1:
+	 * EmployerBuilder builder=new EmployerBuilder(); registerEmployer(builder);
+	 * System.out.println("New Employer Added succesfully.. "); break; case 2:
+	 * LoginBuilder lbuilder=new LoginBuilder(); loginAsEmployer(lbuilder);
+	 * System.out.println("Employer logged in succesfully.. "); break; case 3:
+	 * JobSeekerBuilder jbuilder=new JobSeekerBuilder();
+	 * registerJobSeeker(jbuilder);
+	 * System.out.println("New JobSeeker Added succesfully.. "); break; case 4:
+	 * LoginBuilder jobbuilder=new LoginBuilder(); loginAsJobSeeker(jobbuilder);
+	 * System.out.println("JobSeeker logged in succesfully.. "); case 5: JobBuilder
+	 * jjbuilder=new JobBuilder(); postAjob(jjbuilder);
+	 * System.out.println("New Job Posted succesfully.. "); break; case 6:
+	 * JobBuilder jdbuilder=new JobBuilder(); System.out.println("Enter job id:");
+	 * int job_id=Integer.parseInt(scanner.nextLine()); int id=deleteAjob(job_id);
+	 * System.out.println("Job Deleted succesfully.. "); break; case 7: JobBuilder
+	 * viewbuilder=new JobBuilder(); viewAllJobsByEmployer(); break; default:
+	 * System.out.println("Invalid option"); break; } }catch(EmployerException e) {
+	 * e.printStackTrace(); } System.out.println("Enter y to continue.."); String
+	 * ch=scanner.nextLine(); if(!ch.equalsIgnoreCase("y")) { break; }}}
+	 * 
+	 */
 			
 			
 	private static void loginAsJobSeeker(LoginBuilder jobbuilder) {
